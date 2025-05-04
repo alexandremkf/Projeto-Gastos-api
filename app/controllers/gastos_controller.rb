@@ -8,4 +8,17 @@ class GastosController < ApplicationController
         render json: @user.gastos
     end
 
+    private
+
+    def set_user
+        @user = User.find(params[:user_id])
+    end
+    
+    def set_gasto
+        @gasto = @user.gastos.find(params[:id])
+    end
+    
+    def gasto_params
+        params.require(:gasto).permit(:descricao, :valor, :data)
+    end
 end
