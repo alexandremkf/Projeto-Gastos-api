@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_02_021153) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_04_165053) do
+  create_table "gastos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "description"
+    t.decimal "value", precision: 10
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_gastos_on_user_id"
+  end
+
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -19,4 +29,5 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_02_021153) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "gastos", "users"
 end
