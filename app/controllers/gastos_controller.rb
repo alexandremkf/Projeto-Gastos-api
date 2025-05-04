@@ -8,6 +8,17 @@ class GastosController < ApplicationController
         render json: @user.gastos
     end
 
+    # Método para criar um gasto para o usuário pedido.
+    def create
+        gasto = @user.gastos.new(gasto_params)
+    
+        if gasto.save
+          render json: gasto, status: :created
+        else
+          render json: { errors: gasto.errors.full_messages }, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def set_user
