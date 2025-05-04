@@ -19,6 +19,15 @@ class GastosController < ApplicationController
         end
     end
 
+    # Método para atualizar e editar o gasto do usuário pedido.
+    def update
+        if @gasto.update(gasto_params)
+          render json: @gasto
+        else
+          render json: { errors: @gasto.errors.full_messages }, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def set_user
