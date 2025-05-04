@@ -26,6 +26,16 @@ class UsersController < ApplicationController
     end
   end
 
+  # Método de deletar o usuário.
+  def destroy
+    user = User.find_by(id: params[:id])
+    if user&.destroy
+      render json: { message: "Usuário deletado." }
+    else
+      render json: { errors: ["Usuário não encontrado ou não foi possível deletar."] }, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def user_params
