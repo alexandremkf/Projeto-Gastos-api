@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
     # Rota de usuário uptade (UPDATE).
     resources :users, only: [:update]
+
+    # Rota de usuário destroy (DELETE).
+    resources :users, only: [:destroy]
     
   # Rotas de gastos aqui:
 
