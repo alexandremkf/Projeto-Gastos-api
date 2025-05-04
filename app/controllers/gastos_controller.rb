@@ -28,6 +28,12 @@ class GastosController < ApplicationController
         end
     end
 
+    # Método para deletar o gasto do usuário pedido.
+    def destroy
+        @gasto.destroy
+        head :no_content
+      end
+
     private
 
     def set_user
