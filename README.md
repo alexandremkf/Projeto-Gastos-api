@@ -16,11 +16,11 @@ Uma API RESTful desenvolvida em Ruby on Rails para gerenciamento de usuários e 
 
 ## 🚀 Tecnologias Utilizadas
 
-- Ruby on Rails 7
+- Ruby on Rails 
 - MySQL
-- ActiveRecord
+- phpMyAdmin
 - JSON como formato de resposta
-- Curl/Postman para testes de requisições
+- Curl para testes de requisições
 
 ---
 
