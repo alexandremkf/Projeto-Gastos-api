@@ -7,6 +7,6 @@ class Gasto < ApplicationRecord
   private
 
   def atualizar_total_gastos
-    user.update(total_gastos: user.gastos.sum(:valor))
+    user.update(total_gastos: user.gastos.sum(:value))
   end
 end
