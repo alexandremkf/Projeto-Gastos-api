@@ -1,6 +1,9 @@
 class Gasto < ApplicationRecord
   belongs_to :user
 
+  after_save :atualizar_total_gastos
+  after_destroy :atualizar_total_gastos
+
   private
 
   def atualizar_total_gastos
