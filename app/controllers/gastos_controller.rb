@@ -52,6 +52,6 @@ class GastosController < ApplicationController
     end
     
     def gasto_params
-        params.require(:gasto).permit(:descricao, :valor, :data)
+        params.require(:gasto).permit(:description, :value, :date)
     end
 end
