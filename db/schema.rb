@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_04_165053) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_05_015026) do
   create_table "gastos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "description"
     t.decimal "value", precision: 10
@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_04_165053) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "total_gastos"
   end
 
   add_foreign_key "gastos", "users"
