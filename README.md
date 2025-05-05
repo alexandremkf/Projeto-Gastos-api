@@ -22,6 +22,8 @@ Uma API RESTful desenvolvida em Ruby on Rails para gerenciamento de usuários e 
 - JSON como formato de resposta
 - Curl/Postman para testes de requisições
 
+---
+
 ## 👨‍💻 Autor
 Feito com dedicação por Alexandre Matiello!
 📎 [LinkedIn](https://www.linkedin.com/in/alexandre-matiello/)
