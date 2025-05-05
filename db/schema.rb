@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_05_015026) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "total_gastos"
+    t.float "total_gastos", default: 0.0
   end
 
   add_foreign_key "gastos", "users"
